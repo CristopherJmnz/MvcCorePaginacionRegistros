@@ -11,7 +11,7 @@ namespace MvcCorePaginacionRegistros.ViewComponents
         public MenuDepartamentosViewComponent(HospitalRepository repo)
         {
             this.repo = repo;
-        }
+        }   
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
