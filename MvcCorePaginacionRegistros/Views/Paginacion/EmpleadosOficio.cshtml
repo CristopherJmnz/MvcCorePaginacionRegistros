@@ -1,0 +1,64 @@
+﻿@model List<Empleado>
+
+@{
+    int numRegistros = 0;
+    string oficio = "";
+    if (ViewData["REGISTROS"]!=null)
+    {
+        numRegistros = (int) ViewData["REGISTROS"];
+        oficio = (string) ViewData["OFICIO"];
+    }
+    int numeroPagina = 1;
+}
+
+<form method="post" class="mb-3">
+    <input class="form-control mb-3" type="text" placeholder="Oficio" name="oficio" />
+    <button class="btn btn-info">Buscar</button>
+</form>
+@if (Model!=null)
+{
+    <div class="container-fluid">
+        <table class="table table-bordered table-info">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Apellido</th>
+                    <th>Salario</th>
+                    <th>Oficio</th>
+                    <th>ID Departamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.IdEmpleado</td>
+                        <td>@item.Apellido</td>
+                        <td>@item.Salario</td>
+                        <td>@item.Oficio</td>
+                        <td>@item.IdDepartamento</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <nav>
+            <ul class="pagination justify-content-center">
+                @for (int i = 1; i <= numRegistros; i += 2)
+                {
+                    <li class="page-item">
+                        <a class="page-link"
+                           asp-controller="Paginacion"
+                           asp-action="EmpleadosOficio"
+                           asp-route-posicion="@i"
+                           asp-route-oficio="@oficio">
+                            @numeroPagina
+                        </a>
+                    </li>
+                    numeroPagina++;
+                }
+            </ul>
+        </nav>
+    </div>
+}
+

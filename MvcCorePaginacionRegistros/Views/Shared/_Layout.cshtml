@@ -23,22 +23,27 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         @await Component.InvokeAsync("MenuDepartamentos")
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <partial name="_MenuUsuario" />
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Paginacion" asp-action="PaginarRegistroVistaDepartamento">PaginarRegistroVistaDepartamento</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Paginacion" asp-action="PaginarGrupoVistaDepartamento">PaginarGrupoVistaDepartamento</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Paginacion" asp-action="PaginarGrupoDepartamento">PaginarGrupo Departamento</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Paginacion" asp-action="PaginarGrupoEmpleados">Paginar EMPLEADOS</a>
-                        </li>
+                        @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>                             
+                        <partial name="_MenuUsuario" />   
+                        <li class="nav-item">             
+                            <a class="nav-link text-dark" asp-controller="Paginacion" asp-action="PaginarRegistroVistaDepartamento">PaginarRegistroVistaDepartamento</a>
+                        </li>                             
+                        <li class="nav-item">             
+                            <a class="nav-link text-dark" asp-controller="Paginacion" asp-action="PaginarGrupoVistaDepartamento">PaginarGrupoVistaDepartamento</a>
+                        </li>                             
+                        <li class="nav-item">             
+                            <a class="nav-link text-dark" asp-controller="Paginacion" asp-action="PaginarGrupoDepartamento">PaginarGrupo Departamento</a>
+                        </li>                             
+                        <li class="nav-item">             
+                            <a class="nav-link text-dark" asp-controller="Paginacion" asp-action="PaginarGrupoEmpleados">Paginar EMPLEADOS</a>
+                        </li>                             
+                        <li class="nav-item">             
+                            <a class="nav-link text-dark" asp-controller="Paginacion" asp-action="EmpleadosOficio">EMPLEADOS Oficio</a>
+                        </li><li class="nav-item">             
+                            <a class="nav-link text-dark" asp-controller="Paginacion" asp-action="EmpleadosOficioOut">EMPLEADOS Oficio OUT</a>
+                        </li> *@
                     </ul>
                 </div>
             </div>

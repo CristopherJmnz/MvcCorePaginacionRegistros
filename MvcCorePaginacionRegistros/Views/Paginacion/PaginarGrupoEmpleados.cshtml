@@ -11,6 +11,8 @@
             <th>ID</th>
             <th>Apellido</th>
             <th>Salario</th>
+            <th>Oficio</th>
+            <th>ID Departamento</th>
         </tr>
     </thead>
     <tbody>
@@ -20,21 +22,26 @@
                 <td>@item.IdEmpleado</td>
                 <td>@item.Apellido</td>
                 <td>@item.Salario</td>
+                <td>@item.Oficio</td>
+                <td>@item.IdDepartamento</td>
             </tr>
         }
     </tbody>
 </table>
 
-<ul class="list-group list-group-horizontal">
-    @for (int i = 1; i <= numRegistros; i += 3)
-    {
-        <li class="list-group-item list-group-item-success">
-            <a asp-controller="Paginacion"
-               asp-action="PaginarGrupoEmpleados"
-               asp-route-posicion="@i">
-                @numeroPagina
-            </a>
-        </li>
-        numeroPagina++;
-    }
-</ul>
+<nav>
+    <ul class="pagination justify-content-center">
+        @for (int i = 1; i <= numRegistros; i += 3)
+        {
+            <li class="page-item">
+                <a class="page-link"
+                    asp-controller="Paginacion"
+                   asp-action="PaginarGrupoEmpleados"
+                   asp-route-posicion="@i">
+                    @numeroPagina
+                </a>
+            </li>
+            numeroPagina++;
+        }
+    </ul>
+</nav>

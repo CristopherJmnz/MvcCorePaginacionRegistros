@@ -2,16 +2,16 @@
 
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-        Coches
+        DEPARTAMENTOS
     </a>
     <ul class="dropdown-menu">
         @foreach (Departamento dept in Model)
         {
             <li>
                 <a class="dropdown-item"
-                   asp-controller="Empleados"
-                   asp-action="EmpleadosDepartamento"
-                   asp-route-iddepartamento="@dept.IdDepartamento">
+                   asp-controller="Departamentos"
+                   asp-action="Details"
+                   asp-route-id="@dept.IdDepartamento">
                     @dept.Nombre
                 </a>
             </li>
